@@ -1,0 +1,14 @@
+secrets.txt
+.env
+cv_env/
+venv/
+__pycache__/
+*.pyc
+cvstart.bat
+docs/
+functions.txt
+job_cache/
+çıktı.txt
+tempCodeRunnerFile.py
+data/
+Resumes PDF/
