@@ -2,7 +2,7 @@
 
 İş ilanlarını parse ederek gereksinimler çıkartan, ardından bu gereksinimlere göre CV'leri embedding tabanlı olarak puanlayıp sıralayan bir Python uygulaması.
 
-Desteklenen dosya formatları: `.pdf`, `.docx`, `.txt`
+Desteklenen CV dosya formatları: `.pdf`, `.docx`, `.txt`
 
 ---
 
