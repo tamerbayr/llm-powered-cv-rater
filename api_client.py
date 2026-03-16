@@ -31,7 +31,7 @@ def detect_provider(api_key):
             "provider": "OpenRouter",
             "endpoint": "https://openrouter.ai/api/v1/chat/completions",
             #"default_model": "meta-llama/llama-3.3-70b-instruct:free"
-            "default_model": "arcee-ai/trinity-large-preview:free"
+            "default_model": "stepfun/step-3.5-flash:free"
         }
     elif api_key.startswith("sk-proj-") or api_key.startswith("sk-"):
         return {
