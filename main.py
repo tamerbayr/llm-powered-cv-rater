@@ -208,6 +208,9 @@ def print_requirements(job: dict):
 def main():
     storage.init_db()
 
+    os.makedirs("docs\cvs", exist_ok=True)
+    os.makedirs("docs\jobs", exist_ok=True)
+    
     print("CV'ler yükleniyor")
     cvs = load_cvs()
     print(f"{len(cvs)} CV yüklendi")
