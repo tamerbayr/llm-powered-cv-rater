@@ -36,6 +36,7 @@ Bir ilan seçildiğinde eğer ilan yeni veya değiştirilmişse LLM ile parse ed
 ### Desteklenen LLM Sağlayıcılar
 
 Gemini, Claude, ChatGPT ve OpenRouter desteklenir. Servis sağlayıcıyı sistem otomatik olarak anlar.
+Model değiştirmek için api_client.py dosyasında detect_provider fonksiyonunu değiştirebilirsiniz.
 
 Claude:
 Endpoint: https://api.anthropic.com/v1/messages
@@ -51,35 +52,17 @@ Model: gemini-1.5-flash
 
 OpenRouter
 Endpoint: https://openrouter.ai/api/v1/chat/completions
-Model: meta-llama/llama-3.3-70b-instruct:free
+Model: "arcee-ai/trinity-large-preview:free"
 (ücretsiz model)
 ---
 
-## Gereksinim Yapısı
-
-LLM'in ilanlardan çıkardığı her gereksinim aşağıdaki alanları içerir:
-
-| Alan | Açıklama |
-|---|---|
-| `skill_tr` | Beceri adı (Türkçe) |
-| `skill_en` | Beceri adı (İngilizce) |
-| `aliases` | CV'lerde geçebilecek alternatif yazımlar |
-| `type` | `skill`, `experience`, `education`, `personal_trait`, `logistics` |
-| `priority` | `hard_requirement`, `soft_requirement`, `bonus` |
-| `weight` | Skor ağırlığı: 1.0 / 0.6 / 0.2 |
-| `min_years` | Minimum deneyim yılı (geçerli değilse 0) |
-| `target_section` | CV'nin hangi bölümünde aranacağı |
-
-`education` türündeki gereksinimler ek olarak `degree_level`, `degree_status` ve `field_text` alanlarını içerir.
-
----
 
 ## Notlar
 
 - Program 100% doğrulukta çalışmayabilir. Gerçek hayat kullanımında karar verici program olarak kullanılmamalı, sonuçları kontrol edilmelidir.
-- `docs/cvs/` klasöründen bir CV silinirse veritabanından da otomatik kaldırılır. Aynı durum ilanlar için de geçerlidir.
+- docs klasöründen cv veya ilan silinirse veritabanından da silinir.
 - CV'ler dosya hash'i ile takip edilir. İçerik veya dosya adı değiştiğinde tekrar LLM'e gönderilir.
-- Görsel taranarak oluşturulan PDF'leri DocTR ile tarar. Bu tür dosyalarda DocTR kaynaklı hatalar oluşabilir.
+- Görsel taranarak oluşturulan PDF'leri DocTR ile tarar. Bu tür dosyalarda DocTR kaynaklı hatalar olabilir.
 - DataBase'i temizlemek için Data klasöründeki .db dosyasını silebilirsiniz.
 
 ## Troubleshoot
