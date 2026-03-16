@@ -12,7 +12,10 @@ pip install -r requirements.txt
 
 Kodunu CMD ile çalıştırın.
 
+py main.py kullanarak veya start.bat dosyasını açarak programı 1 defa çalıştırın. Program durduğunda CV ve iş ilanlarını 'docs' klasörüne yükleyebilirsiniz.
+
 Python 3.10.11 ile geliştirilmiştir.
+
 ---
 
 ## Kullanım
