@@ -50,10 +50,11 @@ Gemini
 Endpoint: https://generativelanguage.googleapis.com/v1beta/openai/
 Model: gemini-1.5-flash 
 
-OpenRouter
+Openrouter
 Endpoint: https://openrouter.ai/api/v1/chat/completions
 Model: "arcee-ai/trinity-large-preview:free"
 (ücretsiz model)
+
 ---
 
 
